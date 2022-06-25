@@ -1,0 +1,30 @@
+Q- There are 3 kingdoms A, B, and C. The army of this kingdom has NA, NB, and NC soldiers respectively.
+You are given that an army with X soldiers can defeat an army with Y soldiers only if X>Y.
+An army is said to be dominant if it can defeat both the other armies combined. For example, kingdom C's army will be dominant only if NC>NA+NB.
+Determine whether any of the armies is dominant or not.
+
+solution:
+
+
+#include <stdio.h>
+
+int main(void) {
+	
+	int i,T;
+	scanf("%d",&T);
+	for(i=1;i<=T;i++)
+	{
+	    int na,nb,nc;
+	    scanf("%d%d%d",&na,&nb,&nc);
+	    if((na>nb+nc)||(nb>na+nc)||(nc>na+nb))     // if kingdom b army will be able to defeat kingdom a and c army or kingdom a army will be able to defeat kingdom b and c army or
+	    {                                          // or if kingdom c army will be able to defeat a and b 
+	        printf("YES\n");
+	    }
+	    else
+	    printf("NO\n");
+	}
+	return 0;
+}
+  
+
+//PRIYANKA DASH(RA2111003011594) ,W2,
